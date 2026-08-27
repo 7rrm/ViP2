@@ -176,6 +176,7 @@ public class NekoConfig {
     // MeeroX v94: save stories to the gallery even when their owner forbids
     // saving, and ghost-mode selective read by swiping a chat in the list.
     // Both off = stock fork behaviour, untouched.
+    public static ConfigItem meeroMessageStyle = addConfig("meeroMessageStyle", configTypeInt, 0);
     public static ConfigItem meeroStoryDownload = addConfig("meeroStoryDownload", configTypeBool, true);
     public static ConfigItem meeroGhostSwipeRead = addConfig("meeroGhostSwipeRead", configTypeBool, true);
     // --- MeeroX Auto-reply (v98). Master switch defaults OFF on purpose:
@@ -293,7 +294,7 @@ public class NekoConfig {
     public static ConfigItem showIdAndDc = addConfig("ShowIdAndDc", configTypeBool, true);
 
     public static ConfigItem cachePath = addConfig("cache_path", configTypeString, "");
-    public static ConfigItem customSavePath = addConfig("customSavePath", configTypeString, "MeeroX");
+    public static ConfigItem customSavePath = addConfig("customSavePath", configTypeString, "ArasGram");
 
     public static ConfigItem translationProvider = addConfig("translationProvider", configTypeInt, 1);
     public static ConfigItem translateToLang = addConfig("TransToLang", configTypeString, ""); // "" -> translate to current language (MessageTrans.kt & Translator.kt)
@@ -358,7 +359,8 @@ public class NekoConfig {
     public static ConfigItem markReadAfterSend = addConfig("markReadAfterSend", configTypeBool, true);
     public static ConfigItem showGhostInDrawer = addConfig("showGhostInDrawer", configTypeBool, false);
     public static ConfigItem showGhostModeStatus = addConfig("showGhostModeStatus", configTypeBool, false);
-
+    // MeeroX v202: keyword alert log
+    public static ConfigItem meeroKeywordLog = addConfig("meeroKeywordLog", configTypeString, "");
     // --- Locked Status ---
     public static ConfigItem sendReadMessagePacketsLocked = addConfig("sendReadMessagePacketsLocked", configTypeBool, false);
     public static ConfigItem sendReadStoriesPacketsLocked = addConfig("sendReadStoriesPacketsLocked", configTypeBool, false);
