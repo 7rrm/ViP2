@@ -5,6 +5,7 @@ import static org.telegram.messenger.LocaleController.getString;
 import android.graphics.drawable.Drawable;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
+import android.graphics.Color;
 
 import androidx.core.content.ContextCompat;
 
@@ -199,7 +200,9 @@ public class TimeStringHelper {
         }
         if (deletedSpan == null) {
             deletedSpan = new SpannableStringBuilder("\u200B");
-            deletedSpan.setSpan(new ColoredImageSpan(deletedDrawable, true), 0, 1, 0);
+            ColoredImageSpan span = new ColoredImageSpan(deletedDrawable, true);
+            span.setOverrideColor(0xFFAF52DE); // ⭐ أرجواني
+            deletedSpan.setSpan(span, 0, 1, 0);
         }
 
         if (translatedDrawable == null) {
